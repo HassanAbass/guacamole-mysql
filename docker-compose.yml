@@ -31,7 +31,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./schema:/opt/guacamole/postgresql/schema
+      - ./guacd/guacamole.properties:/home/guacamole/guacamole.properties
 
   guacd:
     image: guacamole/guacd:latest
