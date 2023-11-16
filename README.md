@@ -9,7 +9,7 @@ Before using this Docker Compose setup, ensure that you have Docker and Docker C
 - [Docker Installation Guide](https://docs.docker.com/get-docker/)
 - [Docker Compose Installation Guide](https://docs.docker.com/compose/install/)
 
-## Usage
+## Docker Usage
 
 1. Clone this repository to your local machine:
 
@@ -23,6 +23,26 @@ Before using this Docker Compose setup, ensure that you have Docker and Docker C
 
    ```bash
    docker-compose up -d
+4. Access Guacamole by navigating to http://localhost:8080/guacamole in your web browser. 
+    >
+        The default credentials are:
+        Username: guacadmin
+        Password: guacadmin
+
+## K8S Usage
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone git@github.com:HassanAbass/guacamole-mysql.git
+2. Create psql dir to persist data
+
+   ```bash
+   mkdir postgres_data
+3. Start k8s deployment
+
+   ```bash
+   kubectl create -f k8s/guacamole.deployment.yml
 4. Access Guacamole by navigating to http://localhost:8080/guacamole in your web browser. 
     >
         The default credentials are:
